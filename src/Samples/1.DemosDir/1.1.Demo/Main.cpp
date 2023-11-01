@@ -51,12 +51,12 @@ int main() {
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
     float vertices[] = {
-            -0.9f, -0.9f, 0.0f,
-            0.9f, -0.9f, 0.0f,
-            0.9f, 0.9f, 0.0f,
-            -0.9f, -0.9f, 0.0f,
-            0.9f, 0.9f, 0.0f,
-            -0.9f, 0.9f, 0.0f
+            -1.0f, -1.0f, 0.0f,
+            1.0f, -1.0f, 0.0f,
+            1.0f, 1.0f, 0.0f,
+            -1.0f, -1.0f, 0.0f,
+            1.0f, 1.0f, 0.0f,
+            -1.0f, 1.0f, 0.0f
     };
 
     unsigned int VBO, VAO;
