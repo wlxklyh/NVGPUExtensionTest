@@ -118,7 +118,7 @@ foreach(CHAPTER ${CHAPTERS})
             if(WIN32)
                 # configure_file(${SHADER} "test")
                 target_compile_definitions(${NAME} PRIVATE "SLN_SOURCE_CODE_DIR=\"${CMAKE_SOURCE_DIR}/src/Samples/${CHAPTER}/${DEMO}/\"")
-                add_custom_command(TARGET ${NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} $<TARGET_FILE_DIR:${NAME}>)
+                add_compile_definitions(SLN_SOURCE_CODE_DIR=\"${CMAKE_SOURCE_DIR}/src/Samples/${CHAPTER}/${DEMO}/\")
 
             elseif(UNIX AND NOT APPLE)
                 file(COPY ${SHADER} DESTINATION ${CMAKE_SOURCE_DIR}/bin/${CHAPTER})
