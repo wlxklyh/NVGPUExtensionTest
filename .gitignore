@@ -1,0 +1,10 @@
+#JB
+.idea
+
+#clion
+cmake-build-debug
+cmake-build-release
+
+#other
+build
+bin
