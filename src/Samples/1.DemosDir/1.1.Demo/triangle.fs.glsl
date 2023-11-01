@@ -7,6 +7,9 @@ in vec3 FragPos;
 
 void main()
 {
+    //smid 的色阶  相同色阶就是同个sm处理的像素
+    float sm_id = float(gl_SMIDNV) / float(gl_SMCountNV);
+
     // 将纹理坐标缩放到0-9区间内
     vec2 texCoord = gl_FragCoord.xy;
 
@@ -15,9 +18,7 @@ void main()
     int yGrid = int(texCoord.y);
 
     // 根据网格位置确定颜色
-    vec3 color = (xGrid % 16 == 0 || (yGrid + 10) % 16 == 0) ? vec3(1.0, 0.0, 0.0) : vec3(0.0);
+    float r = (xGrid % 16 == 0 || (yGrid + 10) % 16 == 0) ? 1.0 : sm_id;
 
-    // 输出最终颜色
-    float sm_v = float(gl_SMIDNV) / float(gl_SMCountNV);
-    FragColor = vec4(color.x, sm_v, sm_v, 1.0);
+    FragColor = vec4(r, sm_id, sm_id, 1.0);
 }
