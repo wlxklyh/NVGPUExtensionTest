@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.0)
 cmake_policy(VERSION 3.0)
 
 #（1）设置工程的名字、设置include目录 和 lib目录、设置cmake module 拆分模块避免cmakelists.txt过大、设置输出目录
-project(LearnOpenGL)
+project(NVGPUExtensionTest)
 set(LOCAL_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/dependencies/includes)
 set(LOCAL_LIB_DIR ${CMAKE_SOURCE_DIR}/dependencies/lib)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
