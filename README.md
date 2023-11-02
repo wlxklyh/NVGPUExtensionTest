@@ -47,9 +47,9 @@ void main()
 1、32个色阶说明，每个SM有32个Warp
 2、每个色块像素是4x8 每个warp有8个core， 但是一个warp只能独占一个sm，所以8个 warp轮流进入这个SM调度？
 3、
-![](.README_images/warp.png)
+![](Img/warp.png)
 
 
 ## thread id
 
-![](.README_images/thread.png)
+![](Img/thread.png)
