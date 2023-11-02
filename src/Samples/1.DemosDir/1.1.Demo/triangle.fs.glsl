@@ -8,7 +8,9 @@ in vec3 FragPos;
 void main()
 {
     //smid 的色阶  相同色阶就是同个sm处理的像素
-    float sm_id = float(gl_SMIDNV) / float(gl_SMCountNV);
+    //gl_WarpIDNV/gl_WarpsPerSMNV
+    //float(gl_WarpIDNV) / float(gl_WarpsPerSMNV)
+    float sm_id = float(gl_ThreadInWarpNV ) / float(gl_WarpSizeNV);
 
     // 将纹理坐标缩放到0-9区间内
     vec2 texCoord = gl_FragCoord.xy;
